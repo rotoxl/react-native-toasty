@@ -40,6 +40,7 @@ RCT_EXPORT_METHOD(Show:(NSDictionary *)props) {
     }
     if (titleColor != nil && [titleColor length] > 0) {
         style.titleColor = [RNToasty ColorFromHexCode: titleColor];
+		style.messageColor=style.titleColor;
     }
     if (titleSize != nil && ![titleSize isEqual:@0]) {
         style.messageFont = [UIFont systemFontOfSize: [titleSize intValue]];
